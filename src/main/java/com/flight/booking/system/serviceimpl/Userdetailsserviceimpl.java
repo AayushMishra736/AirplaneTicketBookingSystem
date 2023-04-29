@@ -6,6 +6,9 @@ import com.flight.booking.system.service.Userdetailsservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class Userdetailsserviceimpl implements Userdetailsservice {
 
@@ -23,12 +26,14 @@ public class Userdetailsserviceimpl implements Userdetailsservice {
     }
 
     @Override
-    public void deleteUser(Userdetails userdetails) {
-        userdetailsrepository.save(userdetails);
+    public Userdetails deleteUser(long userdetails) {
+        Optional<Userdetails> userdetails1 = userdetailsrepository.findById(userdetails);
+        userdetails1.get().setIsActive(0);
+        return userdetailsrepository.save(userdetails1.get());
     }
 
     @Override
-    public void userByName(String userdetails) {
-       userdetailsrepository.findByName(userdetails);
+    public List<Userdetails> userByName(String userdetails) {
+      return userdetailsrepository.findByFirstName(userdetails);
     }
 }
