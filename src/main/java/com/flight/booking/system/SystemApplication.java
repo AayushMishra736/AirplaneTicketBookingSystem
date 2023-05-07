@@ -18,7 +18,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 				description = "This project is for airplane ticket booking.",
 				contact = @Contact(
 						name = "Mr Aayush",
-						email = "aayushmishra736@gmial.com"
+						email = "Aayushmishra736@gmial.com"
 				)
 		)
 )
