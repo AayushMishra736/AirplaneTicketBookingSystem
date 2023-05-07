@@ -5,11 +5,13 @@ import com.flight.booking.system.repository.Userdetailsrepository;
 import com.flight.booking.system.service.Userdetailsservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class Userdetailsserviceimpl implements Userdetailsservice {
 
     @Autowired
@@ -33,7 +35,7 @@ public class Userdetailsserviceimpl implements Userdetailsservice {
     }
 
     @Override
-    public List<Userdetails> userByName(String userdetails) {
-      return userdetailsrepository.findByFirstName(userdetails);
+    public List<Userdetails> findByfirstName(String userdetails) {
+        return userdetailsrepository.findByFirstNameAndIsActive(userdetails, 1);
     }
 }

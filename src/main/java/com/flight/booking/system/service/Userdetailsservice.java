@@ -9,7 +9,10 @@ import java.util.List;
 @Service
 public interface Userdetailsservice {
     public void createUser(Userdetails userdetails);
+
     public void updateUser(Userdetails userdetails);
+
     public Userdetails deleteUser(long userdetails);
-    public List<Userdetails> userByName(String userdetails);
+
+    public List<Userdetails> findByfirstName(String userdetails);
 }
