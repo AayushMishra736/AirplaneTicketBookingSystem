@@ -7,7 +7,6 @@ import lombok.*;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -34,5 +33,7 @@ public class Userdetails {
     private int isAdmin;
     @ApiModelProperty(value = "User is active")
     private int isActive;
+    @ApiModelProperty(value = "User Status")
+    private String message;
 
 }
