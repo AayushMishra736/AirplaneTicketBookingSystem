@@ -33,7 +33,7 @@ public class Userdetailscontroller {
         logger.info("Start creating user!!");
         usersetailsservice.createUser(userdetails);
         logger.info("User Created Successfully!!");
-        sendMessage("User Created Successfully!!");
+        //sendMessage("User Created Successfully!!");
         return "User Created Succesfully";
     }
 
@@ -43,7 +43,7 @@ public class Userdetailscontroller {
         logger.info("Updating the user!!.");
         usersetailsservice.updateUser(userdetails);
         logger.info("User updated successfully!!");
-        sendMessage("User updated successfully!!");
+        //sendMessage("User updated successfully!!");
         return "User Data Updated Successfully";
     }
 
@@ -53,7 +53,7 @@ public class Userdetailscontroller {
         logger.info("Start deleting the user!!");
         usersetailsservice.deleteUser(id);
         logger.info("User Deleted Successfully!!");
-        sendMessage("User Deleted successfully!!");
+        //sendMessage("User Deleted successfully!!");
         return "User Deleted Successfully!!";
     }
 
@@ -64,7 +64,7 @@ public class Userdetailscontroller {
         List<Userdetails> userData = new ArrayList<>();
         userData = usersetailsservice.findByfirstName(firstName);
         logger.info("User Data Published Successfully!!");
-        sendMessage("User Data Published Successfully!!");
+        //sendMessage("User Data Published Successfully!!");
         return userData;
     }
 

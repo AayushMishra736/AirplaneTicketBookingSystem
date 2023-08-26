@@ -30,14 +30,14 @@ public class Userdetailsserviceimpl implements Userdetailsservice {
     public void createUser(Userdetails userdetails) throws IOException, InterruptedException {
         logger.info("Inside create user service!!");
         userdetailsrepository.save(userdetails);
-        sendMessage("Inside create user service!!");
+        //sendMessage("Inside create user service!!");
     }
 
     @Override
     public void updateUser(Userdetails userdetails) throws IOException, InterruptedException {
         logger.info("Inside update user service!!");
         userdetailsrepository.save(userdetails);
-        sendMessage("Inside update user service!!s");
+        //sendMessage("Inside update user service!!s");
     }
 
     @Override

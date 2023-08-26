@@ -32,13 +32,13 @@ public class SystemApplication {
 		SpringApplication.run(SystemApplication.class, args);
 	}
 
-	@Bean
-	public NewTopic topic() {
-		return TopicBuilder.name("myTopic")
-				.partitions(10)
-				.replicas(1)
-				.build();
-	}
+//	@Bean
+//	public NewTopic topic() {
+//		return TopicBuilder.name("myTopic")
+//				.partitions(10)
+//				.replicas(1)
+//				.build();
+//	}
 //
 //	@KafkaListener(id = "myId", topics = "myTopic")
 //	public void listen(String in) {
